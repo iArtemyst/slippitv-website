@@ -1,0 +1,235 @@
+:root {
+    --primary-color: rgb(238, 197, 109);
+    --secondary-color: rgb(30, 0, 64);
+    --dark-color: rgb(15, 15, 15);
+    --overlay-color: rgba(255, 255, 255, .2);
+    --overlay-hover-color: rgb(255, 255, 255, .4);
+    --light-color: rgb(236, 236, 236);
+    --light-hover-color: rgb(255, 255, 255);
+}
+
+html {
+    background-color: black;
+    font-family: sans-serif;
+    color: white;
+}
+body {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    margin: 0;
+}
+header {
+    background-color: rgb(30, 0, 64);
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-content: center;
+    width: 100%;
+    height: 64px;
+}
+footer {
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 48px;
+}
+h1 {
+    font-size: 48px;
+    align-self: center; 
+    background-color: 
+    white; color: 
+    black; 
+    width: fit-content; 
+    height: auto;
+    padding-inline: 1rem;
+    justify-self: center;
+    border-radius: 8px;
+}
+h2  {
+    font-size: 24px;
+    font-weight: 500;
+    padding-inline: 1rem;
+}
+h3 {
+    font-size: 18px;
+    width: fit-content; 
+    height: auto; 
+    padding-inline: 1.5rem; 
+    padding-block: 0.5rem;
+    margin-block: 0.5rem;
+    text-align: left; 
+    border-radius: 8px; 
+    background-color: rgb(238, 197, 109); 
+    color: black;
+}
+h4 {
+    font-size: 14px;
+    align-self: center;
+    padding-inline: 0.5rem;
+}
+h5 {
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+h6 {
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%, 0);
+}
+p {
+    align-self: center;
+    color: white;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+span {
+    align-self: center;
+    color: white;
+    font-size: 14px;
+}
+ul {
+    align-self: center;
+    color: white;
+    font-size: 14px;
+}
+a {
+    align-self: center;
+    text-decoration: none;
+    color: white;
+}
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    max-width: 960px;
+    height: auto;
+    align-self: center;
+    position: relative;
+}
+.maindiv {
+    background-color: var(--primary-color);
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-block: 96px;
+    position: relative;
+}
+.downloaddiv {
+    background-color: var(--dark-color);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-block: 64px;
+    position: relative;
+}
+.infodiv {
+    background-color: var(--secondary-color);
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-block: 64px;
+    position: relative;
+}
+.div2 {
+    width: auto; 
+    height: fit-content; 
+    align-self: center;
+    background-color: var(--overlay-color);
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-radius: 8px;
+}
+.div3 {
+    width: auto; 
+    height: fit-content; 
+    align-self: center;
+    background-color: var(--overlay-color);
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
+    margin-block: 0.5rem;
+    border-radius: 8px;
+}
+
+.header-button {
+    width: auto;
+    height: 36px;
+    justify-content: center;
+    justify-self: end;
+    position: relative;
+    margin: 14px;
+    padding-inline: 1rem;
+    background-color: var(--overlay-color);
+    border: none;
+    border-radius: 8px;
+}
+.header-button:hover {
+    width: auto;
+    height: 36px;
+    justify-content: center;
+    justify-self: end;
+    position: relative;
+    margin: 14px;
+    padding-inline: 1rem;
+    background-color: var(--overlay-hover-color);
+    border: none;
+    border-radius: 8px;
+}
+.dButton {
+    align-self: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    background-color: var(--light-color);
+    width: 100%; 
+    height: 3rem; 
+    border-radius: 8px; 
+    border: none; 
+    margin-block: 4px;
+}
+.dButton:hover {
+    align-self: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    background-color: var(--light-hover-color);
+    width: 100%; 
+    height: 3rem; 
+    border-radius: 8px; 
+    border: none; 
+    margin-block: 4px;
+}
+.linktext {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px
+}
+.ptext {
+    align-self: center;
+    color: white;
+}
+.hbutton-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-self: center;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
