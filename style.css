@@ -1,6 +1,21 @@
+@font-face {
+    font-family: 'dm-mono';
+    src: url('assets/dm.ttf')
+}
+
+@font-face {
+    font-family: 'dm-mono-bold';
+    src: url('assets/dm-bold.ttf');
+}
+
+@font-face {
+    font-family: 'dm-mono-italic';
+    src: url('assets/dm-italic.ttf');
+}
+
 :root {
-    --primary-color: rgb(238, 197, 109);
-    --secondary-color: rgb(30, 0, 64);
+    --primary-color: rgb(252, 183, 55);
+    --secondary-color: rgb(72, 34, 116);
     --dark-color: rgb(15, 15, 15);
     --overlay-color: rgba(255, 255, 255, .2);
     --overlay-hover-color: rgb(255, 255, 255, .4);
@@ -10,7 +25,7 @@
 
 html {
     background-color: black;
-    font-family: sans-serif;
+    font-family: 'dm-mono';
     color: white;
 }
 body {
@@ -22,7 +37,7 @@ body {
     margin: 0;
 }
 header {
-    background-color: rgb(30, 0, 64);
+    background-color: var(--secondary-color);
     display: flex;
     position: relative;
     justify-content: flex-end;
@@ -42,9 +57,8 @@ footer {
 h1 {
     font-size: 48px;
     align-self: center; 
-    background-color: 
-    white; color: 
-    black; 
+    background-color: white; 
+    color: black; 
     width: fit-content; 
     height: auto;
     padding-inline: 1rem;
@@ -53,8 +67,8 @@ h1 {
 }
 h2  {
     font-size: 24px;
-    font-weight: 500;
     padding-inline: 1rem;
+    font-family: 'dm-mono';
 }
 h3 {
     font-size: 18px;
@@ -126,6 +140,24 @@ button {
     padding-block: 96px;
     position: relative;
 }
+.image-container{
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+.info-item{
+    width: auto; 
+    height: 100%; 
+    align-self: center;
+    border-radius: 8px;
+}
+.info-item-header{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+}
 .downloaddiv {
     background-color: var(--dark-color);
     width: 100%;
@@ -145,16 +177,7 @@ button {
     padding-block: 64px;
     position: relative;
 }
-.div2 {
-    width: auto; 
-    height: fit-content; 
-    align-self: center;
-    background-color: var(--overlay-color);
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
-    border-radius: 8px;
-}
-.div3 {
+.patch-container {
     width: auto; 
     height: fit-content; 
     align-self: center;
