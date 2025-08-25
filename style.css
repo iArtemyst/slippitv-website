@@ -65,11 +65,13 @@ h1 {
     align-self: center; 
     background-color: white; 
     color: black; 
-    width: fit-content; 
-    height: fit-content;
+    width: min-content;
+    min-width: 240px;
     padding-inline: 1rem;
     justify-self: center;
     border-radius: 8px;
+    text-align: center;
+    text-wrap: balance;
     margin: 0px;
 }
 h2  {
@@ -78,6 +80,8 @@ h2  {
     font-family: 'dm-mono';
     margin: 0px;
     justify-self: center;
+    text-wrap: balance;
+    text-align: center;
 }
 h3 {
     font-size: 18px;
@@ -370,6 +374,9 @@ svg {
 @media screen and (min-width:961px) {
     h2 {
         font-size: 24px;
+    }
+    h1 {
+        width: auto;
     }
     .column-div {
             grid-template-columns: repeat(2, 1fr);
