@@ -19,7 +19,7 @@
     --dark-color: rgb(15, 15, 15);
     --overlay-color: rgba(255, 255, 255, .2);
     --overlay-hover-color: rgb(255, 255, 255, .4);
-    --light-color: rgb(236, 236, 236);
+    --light-color: #fcfcfc;
     --light-hover-color: rgb(255, 255, 255);
 }
 
@@ -63,7 +63,7 @@ footer {
 h1 {
     font-size: 48px;
     align-self: center; 
-    background-color: var(--light-color); 
+    background-color: var(--light-hover-color); 
     color: var(--dark-color); 
     width: min-content;
     min-width: 240px;
