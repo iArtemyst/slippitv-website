@@ -14,8 +14,8 @@
 }
 
 :root {
-    --primary-color: rgb(252, 183, 55);
-    --secondary-color: rgb(72, 34, 116);
+    --primary-color: #FABF10;
+    --secondary-color: #512BD4;
     --dark-color: rgb(15, 15, 15);
     --overlay-color: rgba(255, 255, 255, .2);
     --overlay-hover-color: rgb(255, 255, 255, .4);
@@ -92,7 +92,7 @@ h3 {
     margin-block: 0.5rem;
     text-align: left; 
     border-radius: 8px; 
-    background-color: rgb(238, 197, 109); 
+    background-color: var(--primary-color); 
     color: black;
 }
 h4 {
@@ -154,19 +154,6 @@ svg {
     padding: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .fillerdiv {
     height: 100%;
     width: 100%;
@@ -206,7 +193,6 @@ svg {
     place-content: center;
     place-self: center;
 }
-
 
 .container {
     width: 80%;
@@ -302,10 +288,15 @@ svg {
     position: relative;
     margin: 14px;
     padding-inline: 1rem;
+    padding-bottom: 2px;;
     background-color: var(--overlay-color);
     border: none;
     border-radius: 8px;
 }
+:hover.header-button{
+    scale: .95;
+}
+
 .header-button:hover {
     width: auto;
     height: 36px;
@@ -343,6 +334,8 @@ svg {
     border-radius: 8px; 
     border: none; 
     margin-block: 4px;
+    scale: .97;
+    cursor: pointer;
 }
 .linktext {
     color: var(--primary-color);
@@ -357,19 +350,6 @@ svg {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-self: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (min-width:961px) {
     h2 {
