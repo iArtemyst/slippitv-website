@@ -4,4 +4,4 @@
 Website Project Files for Slippi.TV, a Slippi SSBM launcher for adding and watching friends play games live.
 
 Main SlippiTV repository found
-<a href="[https://slippi.tv](https://github.com/asundheim/SlippiTV)" target="_blank">here</a>
+<a href="https://github.com/asundheim/SlippiTV" target="_blank">here</a>
