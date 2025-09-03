@@ -39,7 +39,8 @@ body {
     flex: 1;
     height: 100%;
     width: 100%;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 header {
     background-color: var(--secondary-color);
@@ -61,7 +62,7 @@ footer {
     height: 100%;
 }
 h1 {
-    font-size: 48px;
+    font-size: 36px;
     align-self: center; 
     background-color: var(--light-hover-color); 
     color: var(--dark-color); 
@@ -82,7 +83,8 @@ h2  {
     justify-self: center;
     text-wrap: balance;
     text-align: center;
-    color: var(--dark-color)
+    color: var(--dark-color);
+    text-shadow: 0px 0px 2px #00000060;
 }
 h3 {
     font-size: 18px;
@@ -111,10 +113,7 @@ h5 {
     color: var(--dark-color);
 }
 h6 {
-    align-self: center;
-    position: absolute;
-    left: 50%;
-    transform:translate(-50%, 0%);
+    grid-column: 2;
 }
 .h7 {
     align-self: center;
@@ -157,6 +156,31 @@ svg {
     padding: 0;
 }
 
+
+.header-center {
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    transform:translate(-60%, 0%);
+    width: auto; 
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+
+}
+
+.slippi-icon-img {
+    grid-column: 0;
+    width: 36px;
+    margin-right: 12px;
+}
+
+.slippi-svg {
+    grid-column: 0;
+    padding-right: 12px;
+}
+
 .fillerdiv {
     height: 100%;
     width: 100%;
@@ -166,30 +190,55 @@ svg {
     background-color: var(--secondary-color);
 }
 
-.image {
-    align-self: center;
-    column-span: 1;
+.info-img {
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.05);
     width: 100%;
-    justify-self: center;
+    height: auto;
+    margin-bottom: 12px;
 }
 
-.column-div {
+.info-column-div {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    column-span: 1;
     width: 100%;
     place-self: center;
     place-content: center;
+    gap: 24px;
+    margin-bottom: 48px;
 }
+
+.maindiv {
+    flex-grow: 0;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.mainbgimage {
+    position: absolute;
+    z-index: -10;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 200px;
+}
+
 .maincontainer {
     width: 80%;
     max-width: 960px;
     height: auto;
-    position: relative;
+    position: absolute;
     justify-self: center;
     align-self: center;
     gap: 0px;
+    margin: 12px;
+    padding-top: 36px;
+    padding-bottom: 12px;
     display: grid;
     column-span: 1;
     grid-template-columns: repeat(1,1fr);
@@ -207,22 +256,14 @@ svg {
     place-content: center;
     place-self: center;
 }
-.maindiv {
-    background-color: var(--primary-color);
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    gap: 0px;
-    padding-top: 32px;
-    padding-bottom: 8px;
-    position: relative;
-}
+
 .download-container{
     background-color: var(--dark-color);
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-top: 18px;
+    padding-top: 0px;
+    width: 100%;
 }
 
 .infodiv {
@@ -234,30 +275,56 @@ svg {
     place-content: center;
     position: relative;
     padding-block: 12px;
+    place-content: center;
+    justify-content: center;
 }
 
-.info-items {
-    width: auto; 
-    height: auto;
-    align-self: center;
-    justify-self: center;
-    place-self: center;
-    place-content: center;
-    padding: 1rem;
+.github-info {
+    background-color: var(--secondary-color);
+    width: 80%;
+    height: fit-content;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 16px;
-    column-span: 1;
+    grid-template-rows: repeat(2, 1fr);
+    place-content: center;
     position: relative;
+    padding-block: 12px;
+    align-self: center;
+    gap: 0px;
 }
+
+.github-info-p {
+    grid-row: 2;
+    grid-column: 1;
+    text-wrap: balance;
+    text-align: center;
+}
+
 .info-item {
-    height: auto;
+    height: 100%;
     width: 100%;
+    display: grid;
+    padding: 8px;
+    gap: 0px;
+    grid-template-columns: repeat(1, 1fr);
+    place-content: center;
+    justify-content: center;
+    justify-items: center;
 }
 .info-item-header{
     display: flex;
     flex-direction: row;
     margin-block: 8px;
+    justify-self: start;
+}
+
+.github-info-header{
+    display: flex;
+    flex-direction: row;
+    margin-block: 8px;
+    align-items: center;
+    grid-row: 0;
+    grid-column: 0;
 }
 
 .updatesdiv {
@@ -267,7 +334,8 @@ svg {
     display: flex;
     align-content: center;
     justify-content: center;
-    padding-block: 24px;
+    padding-top: 72px;
+    padding-bottom: 72px;
     position: relative;
     flex-direction: column;
     flex-grow: 1;
@@ -324,6 +392,7 @@ svg {
     border-radius: 8px; 
     border: none; 
     margin-block: 4px;
+    padding-inline: 12px;
 }
 .dButton:hover {
     align-self: center;
@@ -340,6 +409,16 @@ svg {
     scale: .97;
     cursor: pointer;
 }
+
+.dContainer{
+    max-width: 960px; 
+    width: 80%; 
+    height: fit-content; 
+    align-self: center; 
+    padding-block: 12px; 
+    justify-self: center;
+}
+
 .linktext {
     color: var(--primary-color);
     text-decoration: none;
@@ -359,6 +438,7 @@ svg {
         font-size: 24px;
     }
     h1 {
+        font-size: 48px;
         width: auto;
     }
     .column-div {
@@ -368,15 +448,15 @@ svg {
         width: auto;
     }
     .maindiv {
-        padding-top: 64px;
-        padding-bottom: 64px;
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
     .info-items {
-            gap: 48px;
-            
+        gap: 48px;
     }
     .updatesdiv {
-            padding-block: 48px;
+        padding-top: 48px;
+        padding-bottom: 24px;
     }
     .download-container {
         padding-block: 32px;
@@ -386,4 +466,20 @@ svg {
         padding-top: 12px;
         padding-bottom: 48px;
     }
+
+    .header-center {
+        transform:translate(-50%, 0%);
+    }
+
+    .dContainer{
+        max-width: 720px; 
+        width: 80%;
+    }
+
+    .info-column-div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 0px;
+    margin: 0px;
+}
 }

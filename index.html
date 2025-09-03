@@ -6,16 +6,22 @@
         <title>slippi.tv</title>
         <script src="app.js" defer></script>
         <link rel="stylesheet" href="style.css"/>
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
     <body>
         <header>
-            <h6 style="font-size: x-large;">SlippiTV</h6>
+            <div class="header-center">
+                <img src="assets/SlippiTV_Simplified_Icon_256px.png" class="slippi-icon-img" />
+                <h6 style="font-size: x-large;">SlippiTV</h6>
+            </div>
+
             <button class="header-button">
-                <a href="https://github.com/asundheim/SlippiTV" target="_blank" class="hbutton-text">Download</a>
+                <a href="https://github.com/asundheim/SlippiTV/releases/download/0.1.0-beta/SlippiTV.0.1.0-beta.zip" target="_blank" class="hbutton-text">Download</a>
             </button>
         </header>
 
 
         <div class="maindiv">
+            <img src="assets/slippitv-main-bg-img.png" class="mainbgimg" width="100%"/>
             <div class="maincontainer"> 
                 <h1>A new way to watch.</h1>
                 <h2 style="align-self: center; height: auto; padding-block: 12px;">
@@ -25,9 +31,9 @@
         </div>
 
         <div class="download-container">
-            <div style="width: 50%; max-width: 960px; height: fit-content; align-self: center; padding-block: 12px; justify-self: center;">
+            <div class="dContainer">
                 <div class="dButton">
-                    <a href="https://github.com/asundheim/SlippiTV/releases/download/0.0.5-beta/SlippiTV.exe" target="_blank">
+                    <a id="download-button" href="https://github.com/asundheim/SlippiTV/releases/download/0.1.0-beta/SlippiTV.0.1.0-beta.zip" target="_blank">
                         <h5>Download SlippiTV</h5>
                     </a>
                 </div>
@@ -36,47 +42,51 @@
 
         <div class="infodiv">
             <div class="container">
-                <!-- <h3>Download the Software</h3> -->
-                <div class="column-div">
-
-                    <img src="assets/slippi_tv_friendspage.png" width="auto" height="100%" class="image"/>
-                    
-
-                    <div class="info-items">
-                        <div class="info-item">
-                            <div class="info-item-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16">
-                                    <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
-                                </svg>
-                                <h4>No additional lag</h4>
-                            </div>
-                            <p>Streams only the .slp data. If your potato can play netplay, it can run SlippiTV.</p>
+                <div class="info-column-div">
+                    <div class="info-item">
+                        <img src="assets/slippitv-info-img-001.png" width="100%" height="auto" class="info-img"/>
+                        <div class="info-item-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16">
+                                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+                            </svg>
+                            <h4>Easily add and remove friends</h4>
                         </div>
+                        <p>Add and arrange your friends to build a list of all the people you enjoy watching play SSBM, and get alerted when they go live!</p>
+                    </div>
 
-                        <div class="info-item">
-                            <div class="info-item-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16">
-                                    <path d="M3.5 11a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm4.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
-                                    <path d="M14 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 14h12a1 1 0 0 0 1-1V5H1v8a1 1 0 0 0 1 1M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1z"/>
-                                </svg>
-                                <h4>Runs in the background</h4>
-                            </div>
-                            <p>Run it once and forget about it. SlippiTV streams your games from the background so you don't have to remember.</p>
+                    <div class="info-item">
+                        <img src="assets/slippitv-info-img-002.png" width="100%" height="auto" class="info-img"/>
+                        <div class="info-item-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16">
+                                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+                            </svg>
+                            <h4>Inline stats for live games</h4>
                         </div>
+                        <p>Quickly see information about the games you friends are playing before you watch them with the inline game statistics</p>
+                    </div>
 
-                        <div class="info-item">
-                            <div class="info-item-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                                </svg>
-                                <h4>Open source</h4>
-                            </div>
-                            <p>
-                                <span>For more information or documentation, visit the </span>
-                                <a href="https://github.com/asundheim/SlippiTV" class="linktext" target="_blank">Github Page</a>
-                            </p>
+                    <div class="info-item">
+                        <img src="assets/slippitv-info-img-003.png" width="100%" height="auto" class="info-img"/>
+                        <div class="info-item-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16">
+                                <path d="M3.5 11a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm4.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+                                <path d="M14 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 14h12a1 1 0 0 0 1-1V5H1v8a1 1 0 0 0 1 1M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1z"/>
+                            </svg>
+                            <h4>Frictionless Setup and Connectivity</h4>
                         </div>
+                        <p>With automatic updates and immediate connection to your local Slippi information, it's never been easier to use.</p>
+                    </div>
 
+                    <div class="info-item">
+                        <img src="assets/slippitv-info-img-004.png" width="100%" height="auto" class="info-img"/>
+                        <div class="info-item-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16">
+                                <path d="M3.5 11a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm4.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+                                <path d="M14 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 14h12a1 1 0 0 0 1-1V5H1v8a1 1 0 0 0 1 1M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1z"/>
+                            </svg>
+                            <h4>Runs in the background with no additional lag</h4>
+                        </div>
+                        <p>Run it once and forget about it! SlippiTV streams only the .slp data from your games in the background so your friends can watch you anytime. If your computer can run Netplay, it can run SlippiTV.</p>
                     </div>
 
                 </div>
@@ -86,6 +96,37 @@
         <div class="updatesdiv">
             <div class="container">
                 <h3>Latest Updates</h3>
+
+                <div class="patch-container">
+                    <h4>0.1.0-beta</h4>
+                    <ul style="padding-left: 2rem">
+                        <li>Fix bug where updater could not execute the script if the path had a space in it</li>
+                    </ul>
+                </div>
+
+                <div class="patch-container">
+                    <h4>0.0.9-beta</h4>
+                    <ul style="padding-left: 2rem">
+                        <li>Fix stale stock icon bug after repeated games</li>
+                    </ul>
+                </div>
+
+                <div class="patch-container">
+                    <h4>0.0.8-beta</h4>
+                    <ul style="padding-left: 2rem">
+                        <li>Massive visual overhaul, theming support</li>
+                        <li>Block restreaming of client spectating</li>
+                        <li>Reorder friends</li>
+                        <li>Turn on notifications for friends going live</li>
+                        <li>Launch on startup</li>
+                        <li>General stability improvements</li>
+                        <li>Refresh computed connection info</li>
+                        <li>Inline preview of game (stocks, game count)</li>
+                        <li>Links to netplay profiles</li>
+                        <li>Add slippi-tv:// protocol</li>
+                    </ul>
+                </div>
+
                 <div class="patch-container">
                     <h4>0.0.5-beta</h4>
                     <ul style="padding-left: 2rem">
@@ -93,10 +134,20 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="github-info" style="justify-items: center;">
+                <div class="github-info-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                    </svg>
+                    <h4 style="margin: 0px 8px 0px 0px;">Open source</h4>
+                </div>
+                <p class="github-info-p">
+                    <span>For more information or documentation, visit the </span>
+                    <a href="https://github.com/asundheim/SlippiTV" class="linktext" target="_blank">Github Page</a>
+                </p>
+            </div>
         </div>
-
-        <!-- <div class="fillerdiv"/> -->
-
 
         <footer class="footer">
             <p class="h7">SlippiTV</p>
