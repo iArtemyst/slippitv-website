@@ -432,6 +432,11 @@ svg {
     border-radius: 8px;
 }
 
+.patch-container > ul > li {
+    margin-top: 0.5em;
+    font-family: sans-serif;
+}
+
 .github-info-header{
     display: flex;
     flex-direction: row;
