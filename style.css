@@ -23,6 +23,8 @@
     --light-hover-color: rgb(255, 255, 255);
 }
 
+/* ---------------------------------------------------------------------- */
+
 html {
     background-color: black;
     font-family: 'dm-mono';
@@ -56,18 +58,18 @@ footer {
     display: flex;
     position: relative;
     justify-content: center;
-    align-content: ;
+    align-content: center;
     width: 100%;
     min-height: 48px;
     height: 100%;
 }
 h1 {
-    font-size: 36px;
+    font-size: 24px;
     align-self: center; 
     background-color: var(--light-hover-color); 
     color: var(--dark-color); 
-    width: min-content;
-    min-width: 240px;
+    width: 80%;
+    max-width: 960px;
     padding-inline: 1rem;
     justify-self: center;
     border-radius: 8px;
@@ -76,7 +78,7 @@ h1 {
     margin: 0px;
 }
 h2  {
-    font-size: 18px;
+    font-size: 14px;
     padding-inline: 1rem;
     font-family: 'dm-mono-bold';
     margin: 0px;
@@ -84,36 +86,41 @@ h2  {
     text-wrap: balance;
     text-align: center;
     color: var(--dark-color);
-    text-shadow: 0px 0px 2px #00000060;
+    text-shadow: 0px 0px 2px #00000020;
 }
 h3 {
     font-size: 18px;
     width: fit-content; 
     height: auto; 
-    padding-inline: 1.5rem; 
-    padding-block: 0.5rem;
-    margin-block: 0.5rem;
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
+    margin-bottom: 12px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
     text-align: left; 
     border-radius: 8px; 
+    justify-self: start;
     background-color: var(--primary-color); 
     color: var(--dark-color);
 }
 h4 {
-    font-size: 14px;
+    font-size: 18px;
     margin: 0px;
     padding-block: 0px;
     padding-left: .5rem;
-    align-self: center;
+    align-self: flex-start;
+    text-wrap: pretty;
     font-family: 'dm-mono';
     color: var(--light-color);
 }
 h5 {
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'dm-mono';
     color: var(--dark-color);
 }
 h6 {
-    grid-column: 2;
+    font-size: 12px;
 }
 .h7 {
     align-self: center;
@@ -124,13 +131,13 @@ h6 {
     font-family: 'dm-mono';
 }
 p {
-    align-self: center;
+    align-self: flex-start;
     color: var(--light-color);
     font-size: 14px;
     padding: 0px;
     margin: 0px;
-    line-height: 18px;
-    text-wrap: pretty;
+    line-height: 1.25em;
+    text-wrap: justify;
 }
 span {
     align-self: center;
@@ -139,7 +146,7 @@ span {
     margin: 0px;
 }
 ul {
-    align-self: center;
+    align-self: flex-start;
     color: var(--light-color);
     font-size: 14px;
 }
@@ -156,6 +163,7 @@ svg {
     padding: 0;
 }
 
+/* ---------------------------------------------------------------------- */
 
 .header-center {
     align-self: center;
@@ -167,112 +175,114 @@ svg {
     align-items: center;
     justify-self: center;
     justify-content: center;
+}
 
+.header-button {
+    width: auto;
+    height: 18px;
+    font-size: 8px;
+    justify-content: center;
+    justify-self: end;
+    position: relative;
+    margin: 6px;
+    padding-inline: .5rem;
+    padding-bottom: 1px;
+    background-color: var(--overlay-color);
+    border: none;
+    border-radius: 6px;
+}
+
+:hover.header-button{
+    scale: .95;
+    background-color: var(--overlay-hover-color);
+}
+
+.hbutton-text {
+    font-family: 'dm-mono-bold';
+    align-self: center;
 }
 
 .slippi-icon-img {
     grid-column: 0;
-    width: 36px;
-    margin-right: 12px;
+    width: 24px;
+    margin-right: 8px;
 }
 
-.slippi-svg {
-    grid-column: 0;
-    padding-right: 12px;
-}
-
-.fillerdiv {
-    height: 100%;
-    width: 100%;
-    position:relative;
-    bottom: auto;
-    z-index: -100;
-    background-color: var(--secondary-color);
-}
-
-.info-img {
-    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 12px;
-}
-
-.info-column-div {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    width: auto;
-    place-self: center;
-    place-content: center;
-    gap: 24px;
-    margin-bottom: 48px;
-}
+/* ---------------------------------------------------------------------- */
 
 .maindiv {
-    flex-grow: 0;
     width: 100%;
-    height: min-content;
+    height: auto;
     display: flex;
-    justify-content: center;
     gap: 0px;
     margin: 0px;
     padding: 0px;
     position: relative;
-}
-
-.mainbgimage {
-    position: absolute;
-    z-index: -10;
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-    height: 200px;
+    background-image: url('assets/slippitv-main-bg-img.png');
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    justify-items: center;
 }
 
 .maincontainer {
-    width: 80%;
+    width: 60%;
     max-width: 960px;
-    height: auto;
-    position: absolute;
+    position: relative;
     justify-self: center;
     align-self: center;
     gap: 0px;
     margin: 12px;
     padding-top: 36px;
     padding-bottom: 12px;
-    display: grid;
-    column-span: 1;
-    grid-template-columns: repeat(1,1fr);
+    display: flex;
+    flex-direction: column;
     place-content: center;
     place-self: center;
 }
 
-.container {
-    width: 80%;
-    max-width: 960px;
-    height: auto;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    place-content: center;
-    place-self: center;
-}
+/* ---------------------------------------------------------------------- */
 
 .download-container{
     background-color: var(--dark-color);
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-items: center;
     padding-top: 0px;
-    width: 100%;
+    width: auto;
 }
 
-.infodiv {
+
+.dButton {
+    align-self: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    background-color: var(--light-color);
+    width: 60%;
+    max-width: 960px;
+    height: 3rem; 
+    border-radius: 8px; 
+    border: none; 
+    margin-top: 16px;
+    margin-bottom: 4px;
+    padding-inline: 12px;
+}
+
+.dButton:hover {
+    scale: .97;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.main-info-div {
     background-color: var(--dark-color);
     width: 100%;
     place-self: center;
-    height: fit-content;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     place-content: center;
@@ -280,42 +290,61 @@ svg {
     padding-block: 12px;
     place-content: center;
     justify-content: center;
+    justify-self: center;
 }
 
-.github-info {
-    background-color: var(--secondary-color);
-    width: 80%;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    place-content: center;
-    position: relative;
-    padding-block: 12px;
-    align-self: center;
-    gap: 0px;
-}
-
-.github-info-p {
-    grid-row: 2;
-    grid-column: 1;
-    text-wrap: balance;
-    text-align: center;
-}
-
-.info-item {
-    height: auto;
+.info-container {
     width: 100%;
-    display: grid;
-    padding: 8px;
-    background-color: #FFFFFF10;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+}
+
+.info-img {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    gap: 0px;
+    width: 100%;
+    max-width: 512px;
+    height: auto;
+    margin-bottom: 12px;
+    place-self: center;
+}
+
+.info-column-div {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
+    width: auto;
+    max-width: 1280px;
+    place-self: center;
     place-content: center;
+    gap: 0px;
+    margin-block: 6px;
+}
+
+.info-col1-div {
+    height: auto;
+    width: 90%;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+}
+
+.info-col2-div {
+    height: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 12px;
+    gap: 16px;
+    place-self: center;
     justify-content: center;
     justify-items: center;
 }
+
 .info-item-header{
     display: flex;
     flex-direction: row;
@@ -327,116 +356,91 @@ svg {
     grid-row: 0;
 }
 
-.github-info-header{
-    display: flex;
-    flex-direction: row;
-    margin-block: 8px;
-    align-items: center;
-    grid-row: 0;
-    grid-column: 0;
-}
-
-.updatesdiv {
-    background-color: var(--secondary-color);
-    width: 100%;
-    height: 100%;;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    padding-top: 72px;
-    padding-bottom: 72px;
-    position: relative;
-    flex-direction: column;
-    flex-grow: 1;
-}
-.patch-container {
-    width: auto; 
-    height: fit-content; 
-    align-self: center;
-    background-color: var(--overlay-color);
-    padding-block: 0.75rem;
-    padding-inline: 1rem;
-    margin-block: 0.5rem;
-    border-radius: 8px;
-}
-
-.header-button {
-    width: auto;
-    height: 36px;
-    justify-content: center;
-    justify-self: end;
-    position: relative;
-    margin: 14px;
-    padding-inline: 1rem;
-    padding-bottom: 2px;;
-    background-color: var(--overlay-color);
-    border: none;
-    border-radius: 8px;
-}
-:hover.header-button{
-    scale: .95;
-}
-
-.header-button:hover {
-    width: auto;
-    height: 36px;
-    justify-content: center;
-    justify-self: end;
-    position: relative;
-    margin: 14px;
-    padding-inline: 1rem;
-    background-color: var(--overlay-hover-color);
-    border: none;
-    border-radius: 8px;
-}
-.dButton {
-    align-self: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    background-color: var(--light-color);
-    width: 100%; 
-    height: 3rem; 
-    border-radius: 8px; 
-    border: none; 
-    margin-block: 4px;
-    padding-inline: 12px;
-}
-.dButton:hover {
-    align-self: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    background-color: var(--light-hover-color);
-    width: 100%; 
-    height: 3rem; 
-    border-radius: 8px; 
-    border: none; 
-    margin-block: 4px;
-    scale: .97;
-    cursor: pointer;
-}
-
-.info-bottom-div {
+.info-text-div {
     display: grid;
     grid-template-rows: repeat(1,1fr);
     gap: 0px;
-    width: auto;
+    width: 90%;
     height: fit-content;
+    place-self: center;
     padding: 0px;
     margin: 0px;
 }
 
-.dContainer{
-    max-width: 960px; 
-    width: 80%; 
-    height: fit-content; 
-    align-self: center; 
-    padding-block: 12px; 
-    justify-self: center;
+/* ---------------------------------------------------------------------- */
+
+.main-updates-div {
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-block: 24px;
+    position: relative;
+    flex-direction: column;
+    flex-grow: 1;
 }
+
+.update-container {
+    width: 80%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    place-self: center;
+}
+
+
+.github-info {
+    background-color: var(--secondary-color);
+    width: 80%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-content: center;
+    position: relative;
+    padding-top: 12px;
+    align-self: center;
+    gap: 8px;
+}
+
+.github-info-p {
+    grid-row: 2;
+    grid-column: 1;
+    text-wrap: balance;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.patch-container {
+    width: 100%; 
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    justify-content: start;
+    background-color: var(--overlay-color);
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
+    margin-block: 0.5rem;
+    margin-inline: 0px;
+    border-radius: 8px;
+}
+
+.github-info-header{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    grid-row: 0;
+    grid-column: 0;
+}
+
+/* ---------------------------------------------------------------------- */
 
 .linktext {
     color: var(--primary-color);
@@ -447,58 +451,117 @@ svg {
     align-self: center;
     color: white;
 }
-.hbutton-text {
-    font-family: 'dm-mono-bold';
-    align-self: center;
-}
 
-@media screen and (min-width:961px) {
-    h2 {
-        font-size: 24px;
-    }
+/* ---------------------------------------------------------------------- */
+
+
+@media screen and (min-width:921px) {
     h1 {
         font-size: 48px;
         width: auto;
+        padding: 12px;
+        margin: 0px;
     }
-    .info-column-div {
-        grid-template-columns: repeat(2, 1fr);
+
+    h2 {
+        font-size: 24px;
+        width: auto;
+        padding: 0px;
+        margin: 0px;
+        text-shadow: 0px 0px 2px #00000050;
     }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 18px;
+        text-wrap: pretty;
+    }
+
     .image {
         width: auto;
     }
-    .maindiv {
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-    .info-items {
-        gap: 48px;
-    }
-    .updatesdiv {
-        padding-top: 48px;
-        padding-bottom: 24px;
-    }
-    .download-container {
-        padding-block: 32px;
-    }
-    .infodiv {
-        padding-top: 12px;
-        padding-bottom: 48px;
+
+    .header-button {
+        width: auto;
+        height: 36px;
+        font-size: 14px;
+        margin: 12px;
+        padding-inline: 1rem;
+        padding-bottom: 2px;
+        border-radius: 8px;
     }
 
     .header-center {
         transform:translate(-50%, 0%);
     }
 
-    .dContainer{
+    .slippi-icon-img {
+        grid-column: 0;
+        width: 36px;
+        margin-right: 12px;
+    }
+
+    .maindiv {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .download-container {
+        padding-block: 6px;
+    }
+
+    .dContainer {
         max-width: 720px; 
         width: 80%;
     }
 
     .info-column-div {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 48px;
-    padding: 0px;
-    margin: 0px;
-}
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+    }
+
+    .info-col1-div {
+        justify-self: end;
+        width: fit-content;
+    }
+
+    .info-col2-div {
+        gap: 72px;
+        width: 100%;
+    }
+
+    .info-img {
+        place-self: end;
+    }
+
+    .info-text-div {
+        place-self: start;
+    }
+
+    .main-updates-div {
+        padding-block: 36px;
+    }
+
+    .updatesdiv {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+
+    .github-info {
+        gap: 0px;
+    }
+
+    .github-info-p {
+        margin-top: 6px;
+    }
+
+
 }
