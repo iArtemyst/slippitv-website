@@ -219,7 +219,7 @@ svg {
     padding: 0px;
     position: relative;
     background-image: url('assets/slippitv-main-bg-img.png');
-    background-position: center;
+    background-position: top;
     background-size: cover;
     justify-content: center;
     justify-items: center;
